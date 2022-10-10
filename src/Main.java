@@ -45,7 +45,7 @@ public class Main {
 
     public static void printList() {
         for (int index = 0; index < employee.length; index++) {
-            System.out.println(employee[index].toString());
+            System.out.println(employee[index]);
         }
     }
 
@@ -84,12 +84,15 @@ public class Main {
     }
 
     public static int countAverageSalary() {
+        int sum = 0;
         int averageSalary = 0;
-        int numberOfEmployees = employee.length;
+        int j = 0;
         for (Employee employee : employee) {
             if (employee != null) {
-                averageSalary = countSalaryExpenditures() / numberOfEmployees;
+                sum = sum + employee.getSalary();
+                j++;
             }
+            averageSalary = sum / j;
         }
         return averageSalary;
     }

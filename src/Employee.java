@@ -5,12 +5,12 @@ public class Employee {
     private int department;
     private int salary;
 
-    private static int i = 0;
+    private static int counter = 0;
 
     private final int id;
 
     public Employee(String surname, String firstName, String middleName, int department, int salary) {
-        this.id = i++;
+        this.id = counter++;
         this.surname = surname;
         this.firstName = firstName;
         this.middleName = middleName;
